@@ -1,17 +1,17 @@
 (() => {
     'use strict';
 
+    const steps = document.querySelectorAll('.quiz-step');
+    const progressFill = document.getElementById('progressFill');
+    const backButton = document.getElementById('backButton');
+
     const state = {
         currentStep: 0,
-        totalSteps: 12,
+        totalSteps: steps.length,
         history: [],
         answers: {},
         loadingTimer: null,
     };
-
-    const steps = document.querySelectorAll('.quiz-step');
-    const progressFill = document.getElementById('progressFill');
-    const backButton = document.getElementById('backButton');
 
     function updateProgress() {
         const percent = Math.min(100, ((state.currentStep + 1) / state.totalSteps) * 100);

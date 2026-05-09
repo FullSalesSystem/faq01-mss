@@ -373,8 +373,154 @@
             </button>
         </section>
 
-        <!-- Step 9: placeholder próxima etapa -->
+        <!-- Step 9: Preparação para reunião -->
         <section class="quiz-step" data-step="9">
+            <h2 class="quiz-title">Você se sente preparado antes de cada reunião de vendas?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="sim-script" data-next="10" type="button">
+                    <span class="list-option-emoji">📚</span>
+                    <span class="list-option-text">Sim, sigo um script definido</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="roteiro-basico" data-next="10" type="button">
+                    <span class="list-option-emoji">🗒️</span>
+                    <span class="list-option-text">Não muito. Tenho um roteiro básico, mas nada formal</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="cada-conversa" data-next="10" type="button">
+                    <span class="list-option-emoji">🗣️</span>
+                    <span class="list-option-text">Não, cada conversa é uma conversa diferente</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 10: Valor antes do preço -->
+        <section class="quiz-step" data-step="10">
+            <h2 class="quiz-title">Seus clientes costumam entender o valor do seu produto antes de perguntar o preço?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="sempre" data-next="11" type="button">
+                    <span class="list-option-emoji">🫠</span>
+                    <span class="list-option-text">Sempre</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="as-vezes" data-next="11" type="button">
+                    <span class="list-option-emoji">😐</span>
+                    <span class="list-option-text">Às vezes</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="quase-nunca" data-next="11" type="button">
+                    <span class="list-option-emoji">😉</span>
+                    <span class="list-option-text">Quase nunca</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 11: Taxa de conversão (estilo radio) -->
+        <section class="quiz-step" data-step="11">
+            <h2 class="quiz-title">Como está sua taxa de conversão nas reuniões/ligações hoje?</h2>
+            <p class="quiz-subtitle">Empresas com processo estruturado convertem 40%+ das reuniões</p>
+
+            <div class="list-options">
+                <button class="list-option list-option--radio" data-value="nao-acompanho" data-next="12" type="button">
+                    <span class="list-option-emoji">🧘</span>
+                    <span class="list-option-text">Não acompanho</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="abaixo-10" data-next="12" type="button">
+                    <span class="list-option-emoji">😢</span>
+                    <span class="list-option-text">&lt; 10%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="10-30" data-next="12" type="button">
+                    <span class="list-option-emoji">😐</span>
+                    <span class="list-option-text">10% - 30%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="31-45" data-next="12" type="button">
+                    <span class="list-option-emoji">📈</span>
+                    <span class="list-option-text">31% - 45%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="acima-45" data-next="12" type="button">
+                    <span class="list-option-emoji">🔔</span>
+                    <span class="list-option-text">Acima de 45%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 12: Urgência -->
+        <section class="quiz-step" data-step="12">
+            <h2 class="quiz-title">Qual é seu nível de urgência para transformar suas vendas?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="1-sem-interesse" data-next="13" type="button">
+                    <span class="list-option-emoji">👎</span>
+                    <span class="list-option-text">1- Não tenho interesse agora</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="2-sem-certeza" data-next="13" type="button">
+                    <span class="list-option-emoji">💭</span>
+                    <span class="list-option-text">2 - Quero mas ainda não tenho certeza se estou pronto (a)</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="3-conhecer-mais" data-next="13" type="button">
+                    <span class="list-option-emoji">📊</span>
+                    <span class="list-option-text">3 - Tenho interesse mas preciso conhecer mais sobre o método da Full Sales</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="4-decidido" data-next="13" type="button">
+                    <span class="list-option-emoji">🔥</span>
+                    <span class="list-option-text">4- Estou 100% decidido(a) a agir agora</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 13: Tela de transição (carregamento) -->
+        <section class="quiz-step quiz-step--loading-narrative" data-step="13" data-loading="5000" data-next-on-load="14">
+            <div class="loading-image">
+                <img src="assets/loading2.png" alt="" onerror="this.style.display='none'">
+            </div>
+            <p class="loading-statement">A maioria das vendas de empresas com o comercial estruturado acontecem na primeira reunião. Ter que enviar várias mensagens pra vender não é "normal".</p>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent" id="loadingPercent2">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill" id="loadingBarFill2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 14: placeholder próxima etapa -->
+        <section class="quiz-step" data-step="14">
             <h2 class="quiz-title">Em breve: próxima etapa</h2>
             <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
         </section>
