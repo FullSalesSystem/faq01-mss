@@ -171,9 +171,211 @@
             </div>
         </section>
 
-        <!-- Step 4: placeholder próxima pergunta -->
+        <!-- Step 4: Como atua hoje -->
         <section class="quiz-step" data-step="4">
-            <h2 class="quiz-title">Em breve: próxima pergunta</h2>
+            <h2 class="quiz-title">Como você atua hoje no mundo das vendas</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="profissional-vendas" data-next="5" type="button">
+                    <span class="list-option-emoji">👨‍💼</span>
+                    <span class="list-option-text">Eu sou profissional de vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="empresario-vende" data-next="5" type="button">
+                    <span class="list-option-emoji">👩‍💻</span>
+                    <span class="list-option-text">Eu sou empresário e eu mesmo vendo</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="empresario-time" data-next="5" type="button">
+                    <span class="list-option-emoji">👨‍💼</span>
+                    <span class="list-option-text">Eu sou empresário e tenho um time comercial</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="curioso" data-next="5" type="button">
+                    <span class="list-option-emoji">🧐</span>
+                    <span class="list-option-text">Sou curioso e não atuo com vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 5: Nicho -->
+        <section class="quiz-step" data-step="5">
+            <h2 class="quiz-title">Em qual nicho sua empresa atua hoje?</h2>
+            <p class="quiz-subtitle">Utilizamos essa informação para personalizar a sua análise.</p>
+            <p class="quiz-subtitle">Temos cases de sucesso específicos para cada nicho.</p>
+
+            <div class="cards-grid cards-grid--3">
+                <button class="card-option card-option--niche" data-value="comercio" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">🛍️</span></div>
+                    <div class="card-label"><span>Comércio</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="tecnologia" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">💻</span></div>
+                    <div class="card-label"><span>Tecnologia</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="educacao" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">📚</span></div>
+                    <div class="card-label"><span>Educação</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="servico" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">🛠️</span></div>
+                    <div class="card-label"><span>Serviço</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="saude" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">⚕️</span></div>
+                    <div class="card-label"><span>Saúde</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="outro" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><span class="niche-emoji">✨</span></div>
+                    <div class="card-label"><span>Outro</span></div>
+                </button>
+            </div>
+
+            <div class="text-input-wrapper">
+                <label for="nichoOutro" class="text-input-label">Caso sua resposta seja "Outro", qual?</label>
+                <input type="text" id="nichoOutro" class="text-input" placeholder="Digite o nicho de atuação da sua empresa" autocomplete="off">
+            </div>
+        </section>
+
+        <!-- Step 6: Porte da empresa -->
+        <section class="quiz-step" data-step="6">
+            <h2 class="quiz-title">Qual o porte da sua empresa hoje?</h2>
+            <p class="quiz-subtitle">Suas informações são 100% confidenciais.</p>
+
+            <div class="list-options">
+                <button class="list-option" data-value="ate-30k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Até R$30 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="30k-100k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$30 e R$100 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="100k-500k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$100 e R$500 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="500k-1m" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$500 e R$ 1 milhão</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="acima-1m" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Acima de R$ 1 milhão</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 7: Maior desafio -->
+        <section class="quiz-step" data-step="7">
+            <h2 class="quiz-title">Qual é o seu maior desafio na área de vendas?</h2>
+            <p class="quiz-subtitle">Sua resposta nos ajuda a criar sua análise personalizada.</p>
+
+            <div class="list-options">
+                <button class="list-option" data-value="gerar-interesse" data-next="8" type="button">
+                    <span class="list-option-emoji">🤯</span>
+                    <span class="list-option-text">Gerar interesse no cliente</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="gerar-valor" data-next="8" type="button">
+                    <span class="list-option-emoji">🤨</span>
+                    <span class="list-option-text">Gerar valor na minha proposta</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="padronizar-script" data-next="8" type="button">
+                    <span class="list-option-emoji">😞</span>
+                    <span class="list-option-text">Padronizar meu script de vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="contornar-objecoes" data-next="8" type="button">
+                    <span class="list-option-emoji">😔</span>
+                    <span class="list-option-text">Contornar objeções</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 8: Conquistas (multi-select) -->
+        <section class="quiz-step" data-step="8" data-multi-step="conquistas" data-next="9">
+            <h2 class="quiz-title">O que você mais deseja conquistar nos próximos 90 dias?</h2>
+            <p class="quiz-subtitle">Selecione uma ou mais opções para avançar</p>
+
+            <div class="multi-options">
+                <label class="multi-option">
+                    <span class="list-option-emoji">📞</span>
+                    <span class="list-option-text">Fazer fechamentos ao vivo/por call com o cliente</span>
+                    <input type="checkbox" name="conquistas" value="fechamentos-call" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">😀</span>
+                    <span class="list-option-text">Cativar a empolgação do cliente para comprar meu produto</span>
+                    <input type="checkbox" name="conquistas" value="empolgacao" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">📊</span>
+                    <span class="list-option-text">Autoridade na apresentação para impressionar o cliente</span>
+                    <input type="checkbox" name="conquistas" value="autoridade" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">🤝</span>
+                    <span class="list-option-text">Conquistar a confiança para que o cliente compre e também nos indique depois</span>
+                    <input type="checkbox" name="conquistas" value="confianca" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">🎯</span>
+                    <span class="list-option-text">Contornar todas as objeções do cliente</span>
+                    <input type="checkbox" name="conquistas" value="objecoes-todas" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+            </div>
+
+            <button type="button" class="btn-primary" data-multi-submit="conquistas" data-next="9" disabled>
+                Ver minha análise
+            </button>
+        </section>
+
+        <!-- Step 9: placeholder próxima etapa -->
+        <section class="quiz-step" data-step="9">
+            <h2 class="quiz-title">Em breve: próxima etapa</h2>
             <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
         </section>
     </main>

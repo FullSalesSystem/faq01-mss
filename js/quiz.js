@@ -91,12 +91,20 @@
         goToStep(previous, { skipHistory: true });
     }
 
-    function handleCardClick(event) {
-        const card = event.currentTarget;
-        const value = card.dataset.value;
-        const next = parseInt(card.dataset.next, 10);
-        const stepEl = card.closest('.quiz-step');
+    function handleSingleSelect(event) {
+        const el = event.currentTarget;
+        const value = el.dataset.value;
+        const next = parseInt(el.dataset.next, 10);
+        const stepEl = el.closest('.quiz-step');
         const stepKey = stepEl ? stepEl.dataset.step : 'unknown';
+
+        // Special case: step 5 (nicho) — captura tambem o texto livre se preenchido
+        if (stepEl && stepEl.dataset.step === '5') {
+            const customNiche = document.getElementById('nichoOutro');
+            if (customNiche && customNiche.value.trim()) {
+                state.answers['5_outro'] = customNiche.value.trim();
+            }
+        }
 
         state.answers[stepKey] = value;
 
@@ -105,8 +113,31 @@
         }
     }
 
-    document.querySelectorAll('.card-option').forEach(card => {
-        card.addEventListener('click', handleCardClick);
+    document.querySelectorAll('.card-option, .list-option').forEach(el => {
+        el.addEventListener('click', handleSingleSelect);
+    });
+
+    // Multi-select handling
+    document.querySelectorAll('.quiz-step[data-multi-step]').forEach(stepEl => {
+        const stepKey = stepEl.dataset.step;
+        const checkboxes = stepEl.querySelectorAll('.multi-checkbox');
+        const submit = stepEl.querySelector('[data-multi-submit]');
+        if (!submit) return;
+
+        const refresh = () => {
+            const selected = Array.from(checkboxes).filter(c => c.checked).map(c => c.value);
+            submit.disabled = selected.length === 0;
+            state.answers[stepKey] = selected;
+        };
+
+        checkboxes.forEach(cb => cb.addEventListener('change', refresh));
+
+        submit.addEventListener('click', () => {
+            const next = parseInt(submit.dataset.next, 10);
+            if (!submit.disabled && !Number.isNaN(next)) {
+                goToStep(next);
+            }
+        });
     });
 
     backButton.addEventListener('click', goBack);
