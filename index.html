@@ -13,6 +13,9 @@
 <body>
     <main class="quiz-container">
         <header class="quiz-header">
+            <button class="back-button" id="backButton" type="button" aria-label="Voltar" hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
             <img src="assets/LOGO-azul.png" alt="Full Sales System" class="logo">
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
@@ -148,8 +151,28 @@
             </div>
         </section>
 
-        <!-- Step 3: placeholder próxima pergunta -->
-        <section class="quiz-step" data-step="3">
+        <!-- Step 3: Tela de carregamento (social proof) -->
+        <section class="quiz-step" data-step="3" data-loading="5000" data-next-on-load="4">
+            <h2 class="quiz-title">Mais de 2000 empresas</h2>
+            <p class="quiz-subtitle">aumentaram suas vendas em média 37% com nosso método</p>
+
+            <div class="loading-image">
+                <img src="assets/secaoespera.png" alt="Profissionais que aumentaram vendas">
+            </div>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent" id="loadingPercent">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill" id="loadingBarFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: placeholder próxima pergunta -->
+        <section class="quiz-step" data-step="4">
             <h2 class="quiz-title">Em breve: próxima pergunta</h2>
             <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
         </section>
