@@ -115,6 +115,14 @@ body {
     margin-bottom: 40px;
 }
 
+.cards-grid--4 .card-image {
+    aspect-ratio: 4 / 5;
+}
+
+.cards-grid--4 .card-image img {
+    object-position: center top;
+}
+
 .card-option {
     position: relative;
     display: flex;
