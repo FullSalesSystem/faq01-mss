@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Performance | Full Sales System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="quiz-container">
+        <header class="quiz-header">
+            <img src="assets/logo.png" alt="Full Sales System" class="logo">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </header>
+
+        <!-- Tela inicial -->
+        <section class="quiz-step active" data-step="0">
+            <h1 class="quiz-title">Descubra porquê seus concorrentes estão vendendo mais</h1>
+            <p class="quiz-subtitle">Faça uma análise gratuita em 2 minutos</p>
+            <p class="quiz-social-proof">Mais de 10.000 profissionais já fizeram essa análise</p>
+
+            <div class="cards-grid">
+                <button class="card-option" data-value="homem" data-next="1">
+                    <div class="card-image">
+                        <img src="assets/homem.jpg" alt="Homem">
+                    </div>
+                    <div class="card-label">
+                        <span>Homem</span>
+                        <span class="card-arrow" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="mulher" data-next="1">
+                    <div class="card-image">
+                        <img src="assets/mulher.jpg" alt="Mulher">
+                    </div>
+                    <div class="card-label">
+                        <span>Mulher</span>
+                        <span class="card-arrow" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                        </span>
+                    </div>
+                </button>
+            </div>
+
+            <p class="quiz-terms">
+                Ao clicar em alguma das opções, você concorda com as
+                <strong>Termos de utilização</strong> e serviço,
+                <strong>Política de privacidade</strong>,
+                <strong>Política de subscrição</strong> e
+                <strong>Política de cookies</strong>
+            </p>
+        </section>
+
+        <!-- Próximas etapas serão adicionadas aqui -->
+        <section class="quiz-step" data-step="1">
+            <h2 class="quiz-title">Em breve: próxima pergunta</h2>
+            <p class="quiz-subtitle">Continue o desenvolvimento adicionando as próximas etapas.</p>
+        </section>
+    </main>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
