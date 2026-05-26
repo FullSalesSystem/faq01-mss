@@ -182,6 +182,37 @@ body {
     padding: 12px 14px;
 }
 
+/* Imagens reduzidas pela metade (etapas iniciais) */
+.quiz-step[data-step="0"] .cards-grid,
+.quiz-step[data-step="1"] .cards-grid,
+.quiz-step[data-step="2"] .cards-grid,
+.quiz-step[data-step="5"] .cards-grid {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-step[data-step="1"] .cards-grid,
+.quiz-step[data-step="2"] .cards-grid {
+    gap: 12px;
+}
+
+.quiz-step[data-step="1"] .card-label,
+.quiz-step[data-step="2"] .card-label {
+    justify-content: center;
+    padding: 9px 8px;
+    font-size: 13px;
+}
+
+.quiz-step[data-step="3"] .loading-image img {
+    max-width: 210px;
+}
+
+.quiz-terms a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 /* List options (emoji + text + arrow row) */
 .list-options {
     display: flex;
