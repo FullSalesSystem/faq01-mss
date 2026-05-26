@@ -705,10 +705,10 @@ body {
 }
 
 .testimonial-text {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.15;
     letter-spacing: -0.01em;
     color: var(--color-text);
     margin-bottom: 14px;
@@ -733,7 +733,7 @@ body {
         gap: 16px;
     }
     .testimonial-text {
-        font-size: 15px;
+        font-size: 22px;
     }
     .testimonial-mark {
         font-size: 48px;
