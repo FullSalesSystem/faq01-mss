@@ -595,15 +595,11 @@
                     <img class="pm" src="assets/estadao.jpg" alt="">
                     <img class="pm" src="assets/pegn.jpg" alt="">
                     <img class="pm" src="assets/valor.jpg" alt="">
-                    <img class="pm" src="assets/uol.jpg" alt="">
-                    <img class="pm" src="assets/terra1.jpg" alt="">
                 </div>
                 <div class="press-mosaic-row">
                     <img class="pm" src="assets/band2.jpg" alt="">
-                    <img class="pm" src="assets/band1.jpg" alt="">
+                    <img class="pm" src="assets/uol.jpg" alt="">
                     <img class="pm" src="assets/terra.jpg" alt="">
-                    <img class="pm" src="assets/msn.jpg" alt="">
-                    <img class="pm" src="assets/band-mobile.jpg" alt="">
                 </div>
             </div>
 
@@ -731,8 +727,8 @@
                     <line x1="40" y1="210" x2="480" y2="210"/>
                 </g>
 
-                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#lvlGrad)" opacity="0.42"/>
-                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#lvlGrad)" stroke-width="4" stroke-linecap="round"/>
+                <path class="chart-fill" d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#lvlGrad)" opacity="0.42"/>
+                <path class="chart-line" pathLength="100" d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#lvlGrad)" stroke-width="4" stroke-linecap="round"/>
 
                 <circle cx="150" cy="210" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
                 <circle cx="260" cy="150" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
@@ -768,7 +764,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="92.4 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="92.4 263.9" style="--len:92.4" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">35%</span>
                     </div>
@@ -779,7 +775,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="105.6 263.9" style="--len:105.6" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">40%</span>
                     </div>
@@ -790,7 +786,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="100.3 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="100.3 263.9" style="--len:100.3" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">38%</span>
                     </div>
@@ -801,7 +797,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="79.2 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="79.2 263.9" style="--len:79.2" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">30%</span>
                     </div>
@@ -1036,11 +1032,9 @@
                 </div>
             </div>
 
-            <a class="btn-primary btn-checkout" href="https://payment.ticto.app/O5E40F8F8" target="_blank" rel="noopener" data-checkout>QUERO VENDER MAIS AGORA</a>
+            <a class="btn-primary btn-checkout btn-pulse" href="https://payment.ticto.app/O5E40F8F8" target="_blank" rel="noopener" data-checkout>QUERO VENDER MAIS AGORA</a>
 
             <p class="checkout-note">Você está garantindo acesso ao Master Sales Script por apenas R$ 97,00, em pagamento único (sem mensalidade). A cobrança aparecerá em sua fatura como "Ticto".</p>
-
-            <p class="pay-methods">Mastercard &middot; Visa &middot; Elo &middot; Hipercard &middot; Diners &middot; Pix &middot; Boleto &middot; Ame</p>
 
             <!-- Você vai receber -->
             <h2 class="offer-heading">Você vai receber:</h2>
