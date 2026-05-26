@@ -56,8 +56,8 @@
 
             <p class="quiz-terms">
                 Ao clicar em alguma das opções, você concorda com as
-                <strong>Termos de utilização</strong> e serviço,
-                <strong>Política de privacidade</strong>,
+                <a href="https://fss.fullsalessystem.com/termos-de-uso" target="_blank" rel="noopener"><strong>Termos de utilização</strong></a> e serviço,
+                <a href="https://fss.fullsalessystem.com/politicas-de-privacidade" target="_blank" rel="noopener"><strong>Política de privacidade</strong></a>,
                 <strong>Política de subscrição</strong> e
                 <strong>Política de cookies</strong>
             </p>
@@ -173,7 +173,7 @@
 
         <!-- Step 4: Como atua hoje -->
         <section class="quiz-step" data-step="4">
-            <h2 class="quiz-title">Como você atua hoje no mundo das vendas</h2>
+            <h2 class="quiz-title">Como você atua hoje no mundo das vendas?</h2>
 
             <div class="list-options">
                 <button class="list-option" data-value="profissional-vendas" data-next="5" type="button">
@@ -595,15 +595,11 @@
                     <img class="pm" src="assets/estadao.jpg" alt="">
                     <img class="pm" src="assets/pegn.jpg" alt="">
                     <img class="pm" src="assets/valor.jpg" alt="">
-                    <img class="pm" src="assets/uol.jpg" alt="">
-                    <img class="pm" src="assets/terra1.jpg" alt="">
                 </div>
                 <div class="press-mosaic-row">
                     <img class="pm" src="assets/band2.jpg" alt="">
-                    <img class="pm" src="assets/band1.jpg" alt="">
+                    <img class="pm" src="assets/uol.jpg" alt="">
                     <img class="pm" src="assets/terra.jpg" alt="">
-                    <img class="pm" src="assets/msn.jpg" alt="">
-                    <img class="pm" src="assets/band-mobile.jpg" alt="">
                 </div>
             </div>
 
@@ -731,8 +727,8 @@
                     <line x1="40" y1="210" x2="480" y2="210"/>
                 </g>
 
-                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#lvlGrad)" opacity="0.42"/>
-                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#lvlGrad)" stroke-width="4" stroke-linecap="round"/>
+                <path class="chart-fill" d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#lvlGrad)" opacity="0.42"/>
+                <path class="chart-line" pathLength="100" d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#lvlGrad)" stroke-width="4" stroke-linecap="round"/>
 
                 <circle cx="150" cy="210" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
                 <circle cx="260" cy="150" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
@@ -768,7 +764,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="92.4 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="92.4 263.9" style="--len:92.4" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">35%</span>
                     </div>
@@ -779,7 +775,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="105.6 263.9" style="--len:105.6" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">40%</span>
                     </div>
@@ -790,7 +786,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="100.3 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="100.3 263.9" style="--len:100.3" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">38%</span>
                     </div>
@@ -801,7 +797,7 @@
                     <div class="donut">
                         <svg viewBox="0 0 100 100">
                             <circle class="donut-track" cx="50" cy="50" r="42"/>
-                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="79.2 263.9" transform="rotate(-90 50 50)"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="79.2 263.9" style="--len:79.2" transform="rotate(-90 50 50)"/>
                         </svg>
                         <span class="donut-label">30%</span>
                     </div>
@@ -876,10 +872,251 @@
             </div>
         </section>
 
-        <!-- Step 23: placeholder próxima etapa -->
+        <!-- Step 23: Avaliações de clientes -->
         <section class="quiz-step" data-step="23">
-            <h2 class="quiz-title">Em breve: próxima etapa</h2>
-            <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
+            <h2 class="quiz-title">O que os clientes da Full Sales System falam sobre o nosso método?</h2>
+            <p class="quiz-subtitle">Mais de 2000 empresas estruturaram seu processo comercial através da nossa metodologia.</p>
+
+            <div class="reviews">
+                <article class="review">
+                    <div class="review-stars" role="img" aria-label="Avaliação 5 de 5 estrelas">
+                        <span aria-hidden="true">★★★★★</span>
+                    </div>
+                    <div class="review-head">
+                        <span class="review-avatar" aria-hidden="true">JG</span>
+                        <span class="review-name">James Gurtner</span>
+                    </div>
+                    <p class="review-text">Primeira call e venda do meu novo closer usando o treinamento FSS! 100% de taxa de conversão!!</p>
+                </article>
+
+                <article class="review">
+                    <div class="review-stars" role="img" aria-label="Avaliação 5 de 5 estrelas">
+                        <span aria-hidden="true">★★★★★</span>
+                    </div>
+                    <div class="review-head">
+                        <span class="review-avatar" aria-hidden="true">JA</span>
+                        <span class="review-name">Juliana Aiquel</span>
+                    </div>
+                    <p class="review-text">Colocamos em prática o Método FSS e em 1 semana já fechamos 2 vendas top! Todos ficaram impressionados e finalmente estão vendo o valor dos nossos serviços. Valeu por cada ensinamento sniper, certeiro. Esse é só o início!</p>
+                </article>
+
+                <article class="review">
+                    <div class="review-stars" role="img" aria-label="Avaliação 5 de 5 estrelas">
+                        <span aria-hidden="true">★★★★★</span>
+                    </div>
+                    <div class="review-head">
+                        <span class="review-avatar" aria-hidden="true">BF</span>
+                        <span class="review-name">Bruno Felizardo</span>
+                    </div>
+                    <p class="review-text">Com ajuda de vocês, reestruturamos o produto e a venda validou a apresentação que fiz com vocês, o script que me passaram... a meta anual saiu de 2 para 3 milhões!</p>
+                </article>
+            </div>
+
+            <button type="button" class="btn-primary" data-advance data-next="24">Continuar</button>
+        </section>
+
+        <!-- Step 24: Oferta Master Sales Script (etapa final) -->
+        <section class="quiz-step quiz-step--offer" data-step="24">
+
+            <!-- Comparativo sem processo x com a Full Sales -->
+            <div class="compare">
+                <div class="compare-col">
+                    <h3 class="compare-title compare-title--bad">Sua empresa sem processo</h3>
+                    <div class="compare-emoji"><img src="assets/triste.png" alt="Empresa sem processo comercial"></div>
+                    <div class="compare-metric">
+                        <span class="compare-metric-name">Conversão</span>
+                        <div class="compare-metric-sub"><span>Fraco</span><span>20%</span></div>
+                        <div class="seg-bar" style="--knob:20%">
+                            <span class="seg seg--bad"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
+                            <span class="seg-knob seg-knob--bad"></span>
+                        </div>
+                    </div>
+                    <div class="compare-metric">
+                        <span class="compare-metric-name">Previsibilidade</span>
+                        <div class="compare-metric-sub"><span>Baixo</span><span>25%</span></div>
+                        <div class="seg-bar" style="--knob:25%">
+                            <span class="seg seg--bad"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
+                            <span class="seg-knob seg-knob--bad"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compare-col">
+                    <h3 class="compare-title compare-title--good">Sua empresa com a Full Sales</h3>
+                    <div class="compare-emoji"><img src="assets/feliz.png" alt="Empresa com processo comercial da Full Sales"></div>
+                    <div class="compare-metric">
+                        <span class="compare-metric-name">Conversão</span>
+                        <div class="compare-metric-sub"><span>Elevado</span><span>100%</span></div>
+                        <div class="seg-bar" style="--knob:100%">
+                            <span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span>
+                            <span class="seg-knob seg-knob--good"></span>
+                        </div>
+                    </div>
+                    <div class="compare-metric">
+                        <span class="compare-metric-name">Previsibilidade</span>
+                        <div class="compare-metric-sub"><span>Elevado</span><span>100%</span></div>
+                        <div class="seg-bar" style="--knob:100%">
+                            <span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span><span class="seg seg--good"></span>
+                            <span class="seg-knob seg-knob--good"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta perfeita pra você -->
+            <div class="offer-callout">
+                <p class="offer-callout-title">Se você chegou até aqui, quero dizer que essa oferta é perfeita pra você:</p>
+                <ul class="offer-list">
+                    <li>📌 É empresário que tem produtos de alto valor agregado</li>
+                    <li>📌 Que tem um time de setters, SDRs ou closers (vendedores).</li>
+                    <li>📌 Que odeia perder tempo em reunião e não quer que seu time seja improdutivo.</li>
+                    <li>📌 Que quer aumentar significativamente sua taxa de fechamento.</li>
+                    <li>📌 Que valoriza o teu tempo e está disposto a investir no seu negócio.</li>
+                </ul>
+            </div>
+
+            <!-- Resultados -->
+            <h2 class="offer-heading offer-heading--red">Pessoas como você tiveram excelentes resultados utilizando o nosso Master Sales Script</h2>
+
+            <div class="results-gauge">
+                <img src="assets/numeros.png" alt="83%, 95% e 97% de resultados dos clientes">
+            </div>
+
+            <div class="results-stats">
+                <div class="result-stat">
+                    <span class="result-stat-num">83%</span>
+                    <p>dos clientes foram capazes de <strong>melhorar o processo comercial</strong> após 15 dias de Master Sales Script</p>
+                </div>
+                <div class="result-stat">
+                    <span class="result-stat-num">97%</span>
+                    <p>dos usuários dos nossos programas <strong>indicam e recomendam</strong> o nosso método em suas redes sociais e para conhecidos</p>
+                </div>
+                <div class="result-stat">
+                    <span class="result-stat-num">95%</span>
+                    <p>dos compradores têm os mesmos <strong>problemas</strong> de estrutura comercial que você</p>
+                </div>
+            </div>
+
+            <!-- Antes x Depois -->
+            <div class="ba-box ba-box--before">
+                <p class="ba-title ba-title--before">Antes de adquirir o Master Sales Script</p>
+                <ul class="ba-list">
+                    <li>❌ Empresários faziam de 10 a 15 apresentações com no máximo 1 venda com desconto.</li>
+                    <li>❌ Treinavam closers e vendedores e eles não conseguiam vender na primeira reunião.</li>
+                    <li>❌ Tinham que contar com a sorte para vender para leads desqualificados e receber reclamações do time comercial.</li>
+                </ul>
+            </div>
+
+            <div class="ba-box ba-box--after">
+                <p class="ba-title">Depois de adquirir o Master Sales Script</p>
+                <ul class="ba-list">
+                    <li>✅ Taxas de conversões maiores com produtos 3x mais caros.</li>
+                    <li>✅ Vendas todos os dias sem investir mais em tráfego pago.</li>
+                    <li>✅ Faz vendas para leads frios e garante conversão mesmo que o Marketing não seja tão efetivo.</li>
+                </ul>
+            </div>
+
+            <!-- Oferta / checkout -->
+            <h2 class="offer-heading">Adquira agora o Master Sales Script</h2>
+
+            <div class="price-box">
+                <div class="price-box-banner">Oferta válida apenas pelas próximas 24 horas</div>
+                <div class="price-box-body">
+                    <span class="price-radio" aria-hidden="true"></span>
+                    <span class="price-name">Master Sales Script</span>
+                    <div class="price-values">
+                        <span class="price-old">De R$ 297 por</span>
+                        <span class="price-now">R$ 97,00</span>
+                        <span class="price-installments">ou 12x de R$9,90</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn-primary btn-checkout btn-pulse" href="https://payment.ticto.app/O5E40F8F8" target="_blank" rel="noopener" data-checkout>QUERO VENDER MAIS AGORA</a>
+
+            <p class="checkout-note">Você está garantindo acesso ao Master Sales Script por apenas R$ 97,00, em pagamento único (sem mensalidade). A cobrança aparecerá em sua fatura como "Ticto".</p>
+
+            <!-- Você vai receber -->
+            <h2 class="offer-heading">Você vai receber:</h2>
+
+            <div class="product">
+                <div class="product-box"><img src="assets/mss.png" alt="Master Sales Script"></div>
+                <p class="product-desc"><strong>Master Sales Script</strong> - Script que vende de 30 a 45% nas reuniões e ligações de venda</p>
+            </div>
+
+            <h2 class="offer-heading">e também vamos te dar de presente:</h2>
+
+            <div class="product">
+                <div class="product-box"><img src="assets/calculadora.png" alt="Calculadora de dimensionamento comercial"></div>
+                <p class="product-desc"><strong>Calculadora de dimensionamento comercial</strong> - Uma calculadora com as principais métricas para dimensionar seu time comercial.</p>
+            </div>
+
+            <div class="product">
+                <div class="product-box"><img src="assets/dimensionamento.png" alt="Masterclass de dimensionamento comercial"></div>
+                <p class="product-desc"><strong>Masterclass de dimensionamento comercial</strong> - Uma aula que te explica como você pode fazer um dimensionamento comercial eficiente.</p>
+            </div>
+
+            <h2 class="offer-heading">como Inteligência Artificial está em alta, criamos pra você:</h2>
+
+            <div class="product">
+                <div class="product-box"><img src="assets/prompts.png" alt="Prompts para criação de scripts de agendamentos"></div>
+                <p class="product-desc"><strong>Prompts para criação de scripts de agendamentos</strong> - Prompts usados em um Chat GPT para que você consiga criar scripts personalizados para agendar leads em calls de venda.</p>
+            </div>
+
+            <div class="product">
+                <div class="product-box"><img src="assets/ligacao.png" alt="Ligação de Diagnóstico personalizada"></div>
+                <p class="product-desc"><strong>Ligação de Diagnóstico do teu negócio personalizada</strong> - Um Gestor Comercial vai analisar o seu negócio e entender como você pode otimizar seu processo comercial.</p>
+            </div>
+
+            <!-- Garantia -->
+            <div class="guarantee-box">
+                <p class="guarantee-title">60 DIAS DE GARANTIA</p>
+                <p>Se você não ficar impressionado, basta nos enviar um e-mail e solicitar um reembolso dentro de 60 dias.</p>
+            </div>
+
+            <div class="guarantee-seals">
+                <img src="assets/garantia.png" alt="Selo de 60 dias de garantia">
+                <img src="assets/favicon.png" alt="Full Sales System" class="guarantee-logo">
+            </div>
+
+            <!-- Cashback -->
+            <h2 class="offer-heading">Ganhe <span class="text-red">CashBack</span> de 100% do valor investido nesse treinamento!</h2>
+            <p class="cashback-lead">Exatamente! Ganhe 100% do valor em Cashback para usar em compras usar em <strong>mais de 2.500 marcas parceiras</strong> como Adidas, Nike, Aramis, etc Uber via App Vale Bônus.</p>
+
+            <h3 class="cashback-subtitle">Como usar o seu cashback?</h3>
+            <ul class="cashback-steps">
+                <li>▶️ <strong>Passo 1:</strong> Faça a compra do seu treinamento</li>
+                <li>▶️ <strong>Passo 2:</strong> Após a confirmação do pagamento, você receberá uma mensagem com os detalhes do seu cashback</li>
+                <li>▶️ <strong>Passo 3:</strong> Crie sua conta gratuita no app Vale Bônus <a href="#" data-valebonus>(incluir link)</a></li>
+                <li>▶️ <strong>Passo 4:</strong> Use o valor disponível como quiser entre os parceiros listados na plataforma!</li>
+            </ul>
+
+            <a class="btn-primary btn-checkout" href="https://payment.ticto.app/O5E40F8F8" target="_blank" rel="noopener" data-checkout>EU QUERO GANHAR O CASHBACK</a>
+
+            <!-- FAQ -->
+            <h2 class="offer-heading offer-heading--red faq-heading">Perguntam muitas vezes…</h2>
+
+            <div class="faq">
+                <details class="faq-item" open>
+                    <summary>Em quanto tempo eu consigo aplicar o Master Sales Script na prática?</summary>
+                    <div class="faq-answer">
+                        <p>O MSS foi criado para <strong>aplicação imediata</strong>.</p>
+                        <p>Assim que você assiste à aula e preenche o documento do script, já consegue adaptar o método para a sua próxima call ou reunião de vendas.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Serve para qualquer tipo de negócio ou só para determinados produtos?</summary>
+                    <div class="faq-answer">
+                        <p>O MSS foi pensado especialmente para negócios que vendem produtos ou serviços de alto valor usando um time comercial, com SDRs, setters ou closers fazendo ligações ou apresentações via Zoom.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Preciso ter uma equipe de vendas grande para usar o MSS?</summary>
+                    <div class="faq-answer">
+                        <p>Não. O MSS funciona tanto para times já estruturados quanto para operações menores que desejam padronizar, profissionalizar e escalar.</p>
+                    </div>
+                </details>
+            </div>
         </section>
     </main>
 

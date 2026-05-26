@@ -182,6 +182,37 @@ body {
     padding: 12px 14px;
 }
 
+/* Imagens reduzidas pela metade (etapas iniciais) */
+.quiz-step[data-step="0"] .cards-grid,
+.quiz-step[data-step="1"] .cards-grid,
+.quiz-step[data-step="2"] .cards-grid,
+.quiz-step[data-step="5"] .cards-grid {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-step[data-step="1"] .cards-grid,
+.quiz-step[data-step="2"] .cards-grid {
+    gap: 12px;
+}
+
+.quiz-step[data-step="1"] .card-label,
+.quiz-step[data-step="2"] .card-label {
+    justify-content: center;
+    padding: 9px 8px;
+    font-size: 13px;
+}
+
+.quiz-step[data-step="3"] .loading-image img {
+    max-width: 210px;
+}
+
+.quiz-terms a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 /* List options (emoji + text + arrow row) */
 .list-options {
     display: flex;
@@ -491,8 +522,8 @@ body {
 }
 
 .analysis-logo img {
-    width: 200px;
-    max-width: 55%;
+    width: 130px;
+    max-width: 42%;
     height: auto;
     animation: pulse 1.8s ease-in-out infinite;
 }
@@ -506,8 +537,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 620px;
+    max-width: 700px;
     margin: 0 auto;
+}
+
+.quiz-step[data-step="20"] .loading-bar-wrapper {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Step 19: imagem da análise menor */
+.quiz-step[data-step="19"] .loading-image img {
+    max-width: 150px;
 }
 
 .analysis-bars .loading-bar-header {
@@ -557,18 +598,18 @@ body {
 }
 
 .press-mosaic-row:nth-child(2) {
-    margin-top: -20px;
+    margin-top: -34px;
 }
 
 .pm {
-    width: 96px;
-    height: 66px;
+    width: 172px;
+    height: 116px;
     object-fit: cover;
     object-position: top center;
     border: 3px solid #fff;
-    border-radius: 6px;
+    border-radius: 8px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
-    margin-left: -20px;
+    margin-left: -34px;
     background: #fff;
 }
 
@@ -616,13 +657,13 @@ body {
 
 @media (max-width: 560px) {
     .pm {
-        width: 64px;
-        height: 46px;
-        margin-left: -16px;
+        width: 108px;
+        height: 74px;
+        margin-left: -22px;
         border-width: 2px;
     }
     .press-mosaic-row:nth-child(2) {
-        margin-top: -14px;
+        margin-top: -22px;
     }
     .press-source {
         font-size: 14px;
@@ -674,10 +715,10 @@ body {
 }
 
 .testimonial-text {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.15;
     letter-spacing: -0.01em;
     color: var(--color-text);
     margin-bottom: 14px;
@@ -702,11 +743,542 @@ body {
         gap: 16px;
     }
     .testimonial-text {
-        font-size: 15px;
+        font-size: 22px;
     }
     .testimonial-mark {
         font-size: 48px;
     }
+}
+
+/* Avaliações de clientes (Step 23) */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 32px 0;
+}
+
+.review {
+    background: #fff;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.review-stars {
+    color: #f5b50a;
+    font-size: 17px;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.review-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.review-avatar {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.review-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 560px) {
+    .review {
+        padding: 18px;
+    }
+    .review-name {
+        font-size: 16px;
+    }
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+/* ===== Oferta Master Sales Script (Step 24) ===== */
+.text-red { color: var(--color-primary); }
+
+.offer-heading {
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 48px auto 24px;
+    max-width: 600px;
+}
+
+.offer-heading--red { color: var(--color-primary); }
+
+/* Comparativo */
+.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 8px;
+}
+
+.compare-title {
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.3;
+    min-height: 44px;
+    margin-bottom: 20px;
+}
+
+.compare-title--bad,
+.compare-title--good { color: var(--color-primary); }
+
+.compare-emoji {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.compare-emoji img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.compare-metric { margin-bottom: 22px; }
+
+.compare-metric-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.compare-metric-sub {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+}
+
+.compare-metric-sub span:last-child {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.seg-bar {
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.seg {
+    flex: 1;
+    height: 10px;
+    border-radius: 999px;
+    background: #ececec;
+}
+
+.seg--bad { background: var(--color-primary); }
+.seg--good { background: #1ca64c; }
+
+.seg-knob {
+    position: absolute;
+    top: 50%;
+    left: var(--knob, 100%);
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.seg-knob--bad { border: 3px solid var(--color-primary); }
+.seg-knob--good { border: 3px solid #1ca64c; }
+
+/* Oferta perfeita pra você */
+.offer-callout {
+    background: #f4f4f5;
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+    margin: 44px auto 8px;
+    max-width: 600px;
+}
+
+.offer-callout-title {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 18px;
+}
+
+.offer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.offer-list li {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Resultados */
+.results-gauge {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 24px;
+}
+
+.results-gauge img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
+.results-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result-stat-num {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.result-stat p {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.result-stat strong { color: var(--color-text); font-weight: 700; }
+
+/* Antes / Depois */
+.ba-box {
+    border-radius: var(--radius-lg);
+    padding: 26px 26px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+.ba-box--before { background: #fdeaea; }
+.ba-box--after { background: #e6f7ec; }
+.ba-box--before:first-of-type { margin-top: 56px; }
+
+.ba-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.ba-title--before { color: var(--color-primary); }
+
+.ba-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ba-list li {
+    font-size: 15.5px;
+    line-height: 1.5;
+}
+
+.ba-box--before .ba-list li { color: #b8050f; }
+.ba-box--after .ba-list li { color: #137a39; }
+
+/* Preço / checkout */
+.price-box {
+    max-width: 520px;
+    margin: 0 auto 18px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.price-box-banner {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 16px;
+}
+
+.price-box-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 22px;
+    background: #fafafa;
+}
+
+.price-radio {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 6px solid var(--color-primary);
+    background: #fff;
+}
+
+.price-name {
+    font-size: 18px;
+    font-weight: 800;
+    flex: 1;
+}
+
+.price-values { text-align: right; line-height: 1.25; }
+
+.price-old {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.price-now {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.price-installments {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.btn-checkout {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.checkout-note {
+    max-width: 480px;
+    margin: 16px auto 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.pay-methods {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-top: 18px;
+    line-height: 1.8;
+}
+
+/* Produtos / bônus */
+.product {
+    max-width: 460px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.product-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.product-box img {
+    width: 300px;
+    max-width: 82%;
+    height: auto;
+}
+
+.product-desc {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+}
+
+.product-desc strong { color: var(--color-primary); font-weight: 800; }
+
+/* Garantia */
+.guarantee-box {
+    max-width: 520px;
+    margin: 32px auto 0;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 28px 26px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+}
+
+.guarantee-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.guarantee-box p:last-child {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+}
+
+.guarantee-seals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin: 36px 0 8px;
+}
+
+.guarantee-seals img { width: 130px; height: auto; }
+.guarantee-seals .guarantee-logo { width: 110px; }
+
+/* Cashback */
+.cashback-lead {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+}
+
+.cashback-lead strong { color: var(--color-text); }
+
+.cashback-subtitle {
+    font-size: 20px;
+    font-weight: 800;
+    max-width: 600px;
+    margin: 36px auto 18px;
+}
+
+.cashback-steps {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cashback-steps li {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.cashback-steps strong { color: var(--color-text); font-weight: 700; }
+.cashback-steps a { color: var(--color-primary); }
+
+/* FAQ */
+.faq-heading { margin-bottom: 28px; }
+
+.faq {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0;
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+    content: "";
+    flex-shrink: 0;
+    width: 11px;
+    height: 11px;
+    border-right: 2.5px solid var(--color-text-muted);
+    border-bottom: 2.5px solid var(--color-text-muted);
+    transform: rotate(45deg);
+    transition: transform var(--transition);
+}
+
+.faq-item[open] summary::after { transform: rotate(-135deg); }
+
+.faq-answer {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.faq-answer p + p { margin-top: 12px; }
+.faq-answer strong { color: var(--color-text); font-weight: 700; }
+
+@media (max-width: 560px) {
+    .offer-heading { font-size: 20px; }
+    .compare { gap: 14px; }
+    .compare-title { font-size: 14px; min-height: 38px; margin-bottom: 14px; }
+    .compare-emoji img { width: 116px; height: 116px; }
+    .compare-metric-name { font-size: 14px; }
+    .seg { height: 8px; }
+    .seg-knob { width: 15px; height: 15px; }
+    .offer-callout-title { font-size: 17px; }
+    .offer-list li,
+    .result-stat p,
+    .cashback-steps li,
+    .cashback-lead { font-size: 15px; }
+    .price-name { font-size: 16px; }
+    .price-now { font-size: 21px; }
+    .guarantee-seals { gap: 22px; }
+    .guarantee-seals img { width: 100px; }
+    .guarantee-seals .guarantee-logo { width: 84px; }
+    .product-desc { font-size: 15px; }
+    .faq-item summary { font-size: 15px; }
 }
 
 /* Multi-select (Step 8) */
@@ -970,4 +1542,82 @@ body {
     .list-option-text {
         font-size: 14px;
     }
+}
+
+/* ===== Animações e destaques ===== */
+
+/* Etapa resultado (21) - gráfico com linha crescente */
+.quiz-step[data-step="21"] .chart-line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: chartLineGrow 1.7s cubic-bezier(0.45, 0.05, 0.2, 1) 0.15s forwards;
+}
+@keyframes chartLineGrow { to { stroke-dashoffset: 0; } }
+
+.quiz-step[data-step="21"] .chart-fill {
+    opacity: 0;
+    animation: chartFillIn 1.1s ease 0.9s forwards;
+}
+@keyframes chartFillIn { to { opacity: 0.42; } }
+
+/* Etapa resultado (21) - destaque do box de alerta */
+.quiz-step[data-step="21"] .result-alert--block {
+    border: 1.5px solid var(--color-primary);
+    animation: alertPop 0.5s ease 0.3s both, alertGlow 2.2s ease-in-out 1s infinite;
+}
+@keyframes alertPop {
+    from { transform: scale(0.95); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+@keyframes alertGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.22); }
+    50%      { box-shadow: 0 0 0 10px rgba(227, 6, 19, 0); }
+}
+
+/* Etapa resultado (21) - donuts crescendo de 0 até o valor */
+.quiz-step[data-step="21"] .donut-value {
+    stroke-dashoffset: var(--len);
+    animation: donutGrow 1.4s ease 0.2s forwards;
+}
+@keyframes donutGrow { to { stroke-dashoffset: 0; } }
+
+/* Etapa final (24) - barras de medição animadas */
+.quiz-step[data-step="24"] .seg {
+    transform-origin: left center;
+    animation: segGrow 0.7s ease both;
+}
+.quiz-step[data-step="24"] .seg:nth-child(1) { animation-delay: 0.05s; }
+.quiz-step[data-step="24"] .seg:nth-child(2) { animation-delay: 0.13s; }
+.quiz-step[data-step="24"] .seg:nth-child(3) { animation-delay: 0.21s; }
+.quiz-step[data-step="24"] .seg:nth-child(4) { animation-delay: 0.29s; }
+.quiz-step[data-step="24"] .seg:nth-child(5) { animation-delay: 0.37s; }
+@keyframes segGrow { from { transform: scaleX(0); } }
+
+.quiz-step[data-step="24"] .seg-knob {
+    animation: knobSlide 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s both;
+}
+@keyframes knobSlide { from { left: 0; } }
+
+/* Etapa final (24) - destaque/pulso do botão principal */
+.btn-pulse {
+    animation: ctaPulse 1.8s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+    0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.45); }
+    50%      { transform: scale(1.03); box-shadow: 0 0 0 14px rgba(227, 6, 19, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quiz-step[data-step="21"] .chart-line,
+    .quiz-step[data-step="21"] .chart-fill,
+    .quiz-step[data-step="21"] .result-alert--block,
+    .quiz-step[data-step="21"] .donut-value,
+    .quiz-step[data-step="24"] .seg,
+    .quiz-step[data-step="24"] .seg-knob,
+    .btn-pulse {
+        animation: none;
+    }
+    .quiz-step[data-step="21"] .chart-line { stroke-dashoffset: 0; }
+    .quiz-step[data-step="21"] .chart-fill { opacity: 0.42; }
+    .quiz-step[data-step="21"] .donut-value { stroke-dashoffset: 0; }
 }
