@@ -639,8 +639,68 @@
             <button type="button" class="btn-primary" data-advance data-next="19">Continuar</button>
         </section>
 
-        <!-- Step 19: placeholder próxima etapa -->
-        <section class="quiz-step" data-step="19">
+        <!-- Step 19: Loading "análise por especialistas" -->
+        <section class="quiz-step" data-step="19" data-loading="5000" data-next-on-load="20">
+            <div class="loading-image">
+                <img src="assets/analise.png" class="loading-image--compact" alt="">
+            </div>
+
+            <h2 class="quiz-title">A sua análise será desenvolvida por especialistas em vendas</h2>
+            <p class="quiz-subtitle">Na Full Sales System, nós ajudamos empresas a multiplicar vendas, escalar lucros e criar previsibilidade com estratégias comerciais personalizadas.</p>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 20: Análise (barras de progresso) -->
+        <section class="quiz-step quiz-step--analysis" data-step="20" data-loading="5000" data-next-on-load="21">
+            <div class="analysis-logo">
+                <img src="assets/favicon.png" alt="Full Sales System">
+            </div>
+
+            <div class="analysis-bars">
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Nível</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-sublabel">Estrutura comercial</div>
+                    <div class="loading-bar loading-bar--knob">
+                        <div class="loading-bar-fill" data-target="40"></div>
+                    </div>
+                </div>
+
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Análise de perfil...</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-bar">
+                        <div class="loading-bar-fill" data-target="100"></div>
+                    </div>
+                </div>
+
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Análise do negócio..</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-bar">
+                        <div class="loading-bar-fill" data-target="100"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 21: placeholder próxima etapa -->
+        <section class="quiz-step" data-step="21">
             <h2 class="quiz-title">Em breve: próxima etapa</h2>
             <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
         </section>

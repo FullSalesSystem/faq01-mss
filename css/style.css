@@ -309,6 +309,66 @@ body {
     outline: none;
 }
 
+/* Análise com barras (Step 20) */
+.analysis-logo {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 48px;
+}
+
+.analysis-logo img {
+    width: 200px;
+    max-width: 55%;
+    height: auto;
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%      { transform: scale(1.05); opacity: 0.82; }
+}
+
+.analysis-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.analysis-bars .loading-bar-header {
+    margin-bottom: 4px;
+}
+
+.loading-sublabel {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.loading-bar--knob {
+    overflow: visible;
+}
+
+.loading-bar--knob .loading-bar-fill {
+    position: relative;
+    overflow: visible;
+}
+
+.loading-bar--knob .loading-bar-fill::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+}
+
 /* Imprensa / clipping (Step 18) */
 .press-mosaic {
     display: flex;
@@ -667,6 +727,10 @@ body {
 .loading-bar-wrapper {
     max-width: 520px;
     margin: 0 auto;
+}
+
+.quiz-subtitle + .loading-bar-wrapper {
+    margin-top: 40px;
 }
 
 .loading-bar-header {

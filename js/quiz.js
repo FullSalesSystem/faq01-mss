@@ -38,28 +38,37 @@
         const nextStep = parseInt(stepEl.dataset.nextOnLoad, 10);
         if (Number.isNaN(duration) || Number.isNaN(nextStep)) return;
 
-        const fill = stepEl.querySelector('#loadingBarFill, .loading-bar-fill');
-        const percentEl = stepEl.querySelector('#loadingPercent, .loading-percent');
-        if (!fill || !percentEl) return;
+        const bars = Array.from(stepEl.querySelectorAll('.loading-bar-wrapper')).map(wrapper => {
+            const fill = wrapper.querySelector('.loading-bar-fill');
+            const percentEl = wrapper.querySelector('.loading-percent');
+            const target = parseInt(fill && fill.dataset.target, 10);
+            return { fill, percentEl, target: Number.isNaN(target) ? 100 : target };
+        }).filter(bar => bar.fill && bar.percentEl);
+
+        if (bars.length === 0) return;
 
         const startedAt = Date.now();
         cancelLoading();
 
-        fill.style.width = '0%';
-        percentEl.textContent = '0%';
+        bars.forEach(bar => {
+            bar.fill.style.width = '0%';
+            bar.percentEl.textContent = '0%';
+        });
 
         state.loadingTimer = setInterval(() => {
             const elapsed = Date.now() - startedAt;
             const ratio = Math.min(1, elapsed / duration);
-            const pct = Math.round(ratio * 100);
-            fill.style.width = `${pct}%`;
-            percentEl.textContent = `${pct}%`;
+            bars.forEach(bar => {
+                const pct = Math.round(ratio * bar.target);
+                bar.fill.style.width = `${pct}%`;
+                bar.percentEl.textContent = `${pct}%`;
+            });
 
             if (ratio >= 1) {
                 cancelLoading();
                 goToStep(nextStep);
             }
-        }, 80);
+        }, 60);
     }
 
     function goToStep(index, options = {}) {
