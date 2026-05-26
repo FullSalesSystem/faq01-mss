@@ -157,18 +157,18 @@ body {
 }
 
 .card-image--niche {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    padding: 14px;
+    padding: 0;
 }
 
 .card-image--niche img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .niche-emoji {
@@ -190,6 +190,10 @@ body {
     max-width: 380px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.quiz-step[data-step="5"] .cards-grid {
+    max-width: 440px;
 }
 
 .quiz-step[data-step="1"] .cards-grid,
