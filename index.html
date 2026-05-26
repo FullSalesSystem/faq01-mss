@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Performance | Full Sales System</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="quiz-container">
+        <header class="quiz-header">
+            <button class="back-button" id="backButton" type="button" aria-label="Voltar" hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <img src="assets/LOGO-azul.png" alt="Full Sales System" class="logo">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </header>
+
+        <!-- Tela inicial -->
+        <section class="quiz-step active" data-step="0">
+            <h1 class="quiz-title">Descubra porquê seus concorrentes estão vendendo mais</h1>
+            <p class="quiz-subtitle">Faça uma análise gratuita em 2 minutos</p>
+            <p class="quiz-social-proof">Mais de 10.000 profissionais já fizeram essa análise</p>
+
+            <div class="cards-grid">
+                <button class="card-option" data-value="homem" data-next="2">
+                    <div class="card-image">
+                        <img src="assets/secao1.png" alt="Homem">
+                    </div>
+                    <div class="card-label">
+                        <span>Homem</span>
+                        <span class="card-arrow" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="mulher" data-next="1">
+                    <div class="card-image">
+                        <img src="assets/secao1-2.png" alt="Mulher">
+                    </div>
+                    <div class="card-label">
+                        <span>Mulher</span>
+                        <span class="card-arrow" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                        </span>
+                    </div>
+                </button>
+            </div>
+
+            <p class="quiz-terms">
+                Ao clicar em alguma das opções, você concorda com as
+                <strong>Termos de utilização</strong> e serviço,
+                <strong>Política de privacidade</strong>,
+                <strong>Política de subscrição</strong> e
+                <strong>Política de cookies</strong>
+            </p>
+        </section>
+
+        <!-- Step 1: Idade (fluxo Mulher) -->
+        <section class="quiz-step" data-step="1">
+            <h2 class="quiz-title">Qual a sua idade?</h2>
+            <p class="quiz-subtitle">Personalizamos estratégias para cada fase da empreendedora</p>
+
+            <div class="cards-grid cards-grid--4">
+                <button class="card-option" data-value="18-29" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/mulher18-29.png" alt="18 a 29 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>18-29</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="30-39" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/mulher30-39.png" alt="30 a 39 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>30-39</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="40-49" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/mulher40-49.png" alt="40 a 49 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>40-49</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="50+" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/mulher50.png" alt="50 anos ou mais">
+                    </div>
+                    <div class="card-label">
+                        <span>50+</span>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 2: Idade (fluxo Homem) -->
+        <section class="quiz-step" data-step="2">
+            <h2 class="quiz-title">Qual a sua idade?</h2>
+            <p class="quiz-subtitle">Personalizamos estratégias para cada fase do empreendedor</p>
+
+            <div class="cards-grid cards-grid--4">
+                <button class="card-option" data-value="18-29" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/homem18-29.png" alt="18 a 29 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>18-29</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="30-39" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/homem30-39.png" alt="30 a 39 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>30-39</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="40-49" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/homem40-49.png" alt="40 a 49 anos">
+                    </div>
+                    <div class="card-label">
+                        <span>40-49</span>
+                    </div>
+                </button>
+
+                <button class="card-option" data-value="50+" data-next="3">
+                    <div class="card-image">
+                        <img src="assets/homem50.png" alt="50 anos ou mais">
+                    </div>
+                    <div class="card-label">
+                        <span>50+</span>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 3: Tela de carregamento (social proof) -->
+        <section class="quiz-step" data-step="3" data-loading="5000" data-next-on-load="4">
+            <h2 class="quiz-title">Mais de 2000 empresas</h2>
+            <p class="quiz-subtitle">aumentaram suas vendas em média 37% com nosso método</p>
+
+            <div class="loading-image">
+                <img src="assets/secaoespera.png" alt="Profissionais que aumentaram vendas">
+            </div>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent" id="loadingPercent">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill" id="loadingBarFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Como atua hoje -->
+        <section class="quiz-step" data-step="4">
+            <h2 class="quiz-title">Como você atua hoje no mundo das vendas</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="profissional-vendas" data-next="5" type="button">
+                    <span class="list-option-emoji">👨‍💼</span>
+                    <span class="list-option-text">Eu sou profissional de vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="empresario-vende" data-next="5" type="button">
+                    <span class="list-option-emoji">👩‍💻</span>
+                    <span class="list-option-text">Eu sou empresário e eu mesmo vendo</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="empresario-time" data-next="5" type="button">
+                    <span class="list-option-emoji">👨‍💼</span>
+                    <span class="list-option-text">Eu sou empresário e tenho um time comercial</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+
+                <button class="list-option" data-value="curioso" data-next="5" type="button">
+                    <span class="list-option-emoji">🧐</span>
+                    <span class="list-option-text">Sou curioso e não atuo com vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 5: Nicho -->
+        <section class="quiz-step" data-step="5">
+            <h2 class="quiz-title">Em qual nicho sua empresa atua hoje?</h2>
+            <p class="quiz-subtitle">Utilizamos essa informação para personalizar a sua análise.</p>
+            <p class="quiz-subtitle">Temos cases de sucesso específicos para cada nicho.</p>
+
+            <div class="cards-grid cards-grid--3">
+                <button class="card-option card-option--niche" data-value="comercio" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho1.png" alt="Comércio"></div>
+                    <div class="card-label"><span>Comércio</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="tecnologia" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho2.png" alt="Tecnologia"></div>
+                    <div class="card-label"><span>Tecnologia</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="educacao" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho3.png" alt="Educação"></div>
+                    <div class="card-label"><span>Educação</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="servico" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho4.png" alt="Serviço"></div>
+                    <div class="card-label"><span>Serviço</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="saude" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho5.png" alt="Saúde"></div>
+                    <div class="card-label"><span>Saúde</span></div>
+                </button>
+                <button class="card-option card-option--niche" data-value="outro" data-next="6" type="button">
+                    <div class="card-image card-image--niche"><img src="assets/nicho6.png" alt="Outro"></div>
+                    <div class="card-label"><span>Outro</span></div>
+                </button>
+            </div>
+
+            <div class="text-input-wrapper">
+                <label for="nichoOutro" class="text-input-label">Caso sua resposta seja "Outro", qual?</label>
+                <input type="text" id="nichoOutro" class="text-input" placeholder="Digite o nicho de atuação da sua empresa" autocomplete="off">
+            </div>
+        </section>
+
+        <!-- Step 6: Porte da empresa -->
+        <section class="quiz-step" data-step="6">
+            <h2 class="quiz-title">Qual o porte da sua empresa hoje?</h2>
+            <p class="quiz-subtitle">Suas informações são 100% confidenciais.</p>
+
+            <div class="list-options">
+                <button class="list-option" data-value="ate-30k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Até R$30 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="30k-100k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$30 e R$100 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="100k-500k" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$100 e R$500 mil</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="500k-1m" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Entre R$500 e R$ 1 milhão</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="acima-1m" data-next="7" type="button">
+                    <span class="list-option-emoji">💰</span>
+                    <span class="list-option-text">Acima de R$ 1 milhão</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 7: Maior desafio -->
+        <section class="quiz-step" data-step="7">
+            <h2 class="quiz-title">Qual é o seu maior desafio na área de vendas?</h2>
+            <p class="quiz-subtitle">Sua resposta nos ajuda a criar sua análise personalizada.</p>
+
+            <div class="list-options">
+                <button class="list-option" data-value="gerar-interesse" data-next="8" type="button">
+                    <span class="list-option-emoji">🤯</span>
+                    <span class="list-option-text">Gerar interesse no cliente</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="gerar-valor" data-next="8" type="button">
+                    <span class="list-option-emoji">🤨</span>
+                    <span class="list-option-text">Gerar valor na minha proposta</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="padronizar-script" data-next="8" type="button">
+                    <span class="list-option-emoji">😞</span>
+                    <span class="list-option-text">Padronizar meu script de vendas</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="contornar-objecoes" data-next="8" type="button">
+                    <span class="list-option-emoji">😔</span>
+                    <span class="list-option-text">Contornar objeções</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 8: Conquistas (multi-select) -->
+        <section class="quiz-step" data-step="8" data-multi-step="conquistas" data-next="9">
+            <h2 class="quiz-title">O que você mais deseja conquistar nos próximos 90 dias?</h2>
+            <p class="quiz-subtitle">Selecione uma ou mais opções para avançar</p>
+
+            <div class="multi-options">
+                <label class="multi-option">
+                    <span class="list-option-emoji">📞</span>
+                    <span class="list-option-text">Fazer fechamentos ao vivo/por call com o cliente</span>
+                    <input type="checkbox" name="conquistas" value="fechamentos-call" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">😀</span>
+                    <span class="list-option-text">Cativar a empolgação do cliente para comprar meu produto</span>
+                    <input type="checkbox" name="conquistas" value="empolgacao" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">📊</span>
+                    <span class="list-option-text">Autoridade na apresentação para impressionar o cliente</span>
+                    <input type="checkbox" name="conquistas" value="autoridade" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">🤝</span>
+                    <span class="list-option-text">Conquistar a confiança para que o cliente compre e também nos indique depois</span>
+                    <input type="checkbox" name="conquistas" value="confianca" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+                <label class="multi-option">
+                    <span class="list-option-emoji">🎯</span>
+                    <span class="list-option-text">Contornar todas as objeções do cliente</span>
+                    <input type="checkbox" name="conquistas" value="objecoes-todas" class="multi-checkbox">
+                    <span class="multi-checkbox-visual" aria-hidden="true"></span>
+                </label>
+            </div>
+
+            <button type="button" class="btn-primary" data-multi-submit="conquistas" data-next="9" disabled>
+                Ver minha análise
+            </button>
+        </section>
+
+        <!-- Step 9: Preparação para reunião -->
+        <section class="quiz-step" data-step="9">
+            <h2 class="quiz-title">Você se sente preparado antes de cada reunião de vendas?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="sim-script" data-next="10" type="button">
+                    <span class="list-option-emoji">📚</span>
+                    <span class="list-option-text">Sim, sigo um script definido</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="roteiro-basico" data-next="10" type="button">
+                    <span class="list-option-emoji">🗒️</span>
+                    <span class="list-option-text">Não muito. Tenho um roteiro básico, mas nada formal</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="cada-conversa" data-next="10" type="button">
+                    <span class="list-option-emoji">🗣️</span>
+                    <span class="list-option-text">Não, cada conversa é uma conversa diferente</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 10: Valor antes do preço -->
+        <section class="quiz-step" data-step="10">
+            <h2 class="quiz-title">Seus clientes costumam entender o valor do seu produto antes de perguntar o preço?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="sempre" data-next="11" type="button">
+                    <span class="list-option-emoji">🫠</span>
+                    <span class="list-option-text">Sempre</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="as-vezes" data-next="11" type="button">
+                    <span class="list-option-emoji">😐</span>
+                    <span class="list-option-text">Às vezes</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="quase-nunca" data-next="11" type="button">
+                    <span class="list-option-emoji">😉</span>
+                    <span class="list-option-text">Quase nunca</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 11: Taxa de conversão (estilo radio) -->
+        <section class="quiz-step" data-step="11">
+            <h2 class="quiz-title">Como está sua taxa de conversão nas reuniões/ligações hoje?</h2>
+            <p class="quiz-subtitle">Empresas com processo estruturado convertem 40%+ das reuniões</p>
+
+            <div class="list-options">
+                <button class="list-option list-option--radio" data-value="nao-acompanho" data-next="12" type="button">
+                    <span class="list-option-emoji">🧘</span>
+                    <span class="list-option-text">Não acompanho</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="abaixo-10" data-next="12" type="button">
+                    <span class="list-option-emoji">😢</span>
+                    <span class="list-option-text">&lt; 10%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="10-30" data-next="12" type="button">
+                    <span class="list-option-emoji">😐</span>
+                    <span class="list-option-text">10% - 30%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="31-45" data-next="12" type="button">
+                    <span class="list-option-emoji">📈</span>
+                    <span class="list-option-text">31% - 45%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+                <button class="list-option list-option--radio" data-value="acima-45" data-next="12" type="button">
+                    <span class="list-option-emoji">🔔</span>
+                    <span class="list-option-text">Acima de 45%</span>
+                    <span class="list-option-radio" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 12: Urgência -->
+        <section class="quiz-step" data-step="12">
+            <h2 class="quiz-title">Qual é seu nível de urgência para transformar suas vendas?</h2>
+
+            <div class="list-options">
+                <button class="list-option" data-value="1-sem-interesse" data-next="13" type="button">
+                    <span class="list-option-emoji">👎</span>
+                    <span class="list-option-text">1- Não tenho interesse agora</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="2-sem-certeza" data-next="13" type="button">
+                    <span class="list-option-emoji">💭</span>
+                    <span class="list-option-text">2 - Quero mas ainda não tenho certeza se estou pronto (a)</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="3-conhecer-mais" data-next="13" type="button">
+                    <span class="list-option-emoji">📊</span>
+                    <span class="list-option-text">3 - Tenho interesse mas preciso conhecer mais sobre o método da Full Sales</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+                <button class="list-option" data-value="4-decidido" data-next="13" type="button">
+                    <span class="list-option-emoji">🔥</span>
+                    <span class="list-option-text">4- Estou 100% decidido(a) a agir agora</span>
+                    <span class="list-option-arrow" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="10 8 14 12 10 16"></polyline></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 13: Tela de transição (carregamento) -->
+        <section class="quiz-step quiz-step--loading-narrative" data-step="13" data-loading="5000" data-next-on-load="14">
+            <div class="loading-image">
+                <img src="assets/progress.png" class="loading-image--compact" alt="Análise de performance de vendas">
+            </div>
+            <p class="loading-statement">A maioria das vendas de empresas com o comercial estruturado acontecem na primeira reunião. Ter que enviar várias mensagens pra vender não é "normal".</p>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent" id="loadingPercent2">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill" id="loadingBarFill2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 14: Nome -->
+        <section class="quiz-step" data-step="14" data-input-step="nome">
+            <h2 class="quiz-title">Preencha seus dados para receber seu diagnóstico:</h2>
+
+            <div class="text-input-wrapper">
+                <label for="leadNome" class="text-input-label">Como podemos te chamar?</label>
+                <input type="text" id="leadNome" name="nome" class="text-input" placeholder="Digite seu nome..." autocomplete="given-name" autocapitalize="words">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="nome" data-next="15" disabled>Continuar</button>
+        </section>
+
+        <!-- Step 15: E-mail -->
+        <section class="quiz-step" data-step="15" data-input-step="email">
+            <h2 class="quiz-title">Preencha seus dados para receber seu diagnóstico:</h2>
+
+            <div class="text-input-wrapper">
+                <input type="email" id="leadEmail" name="email" class="text-input" placeholder="Digite seu e-mail..." autocomplete="email" inputmode="email">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="email" data-next="16" disabled>Continuar</button>
+        </section>
+
+        <!-- Step 16: WhatsApp -->
+        <section class="quiz-step" data-step="16" data-input-step="whatsapp">
+            <div class="text-input-wrapper">
+                <label for="leadWhatsapp" class="text-input-label">Qual o melhor número para contato direto?</label>
+                <input type="tel" id="leadWhatsapp" name="whatsapp" class="text-input" placeholder="Digite seu whatsapp..." autocomplete="tel" inputmode="tel">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="whatsapp" data-next="17" disabled>Continuar</button>
+
+            <p class="quiz-terms">
+                Ao informar meus dados, eu concordo com a <strong>Política de Privacidade</strong>,
+                aceito e autorizo receber contato via e-mail e/ou possivelmente WhatsApp/Ligação.
+            </p>
+        </section>
+
+        <!-- Step 17: Prova social (depoimentos) -->
+        <section class="quiz-step" data-step="17">
+            <h2 class="quiz-title">O que grandes empresas falam sobre a Full Sales System?</h2>
+
+            <div class="testimonials">
+                <figure class="testimonial">
+                    <div class="testimonial-photo">
+                        <img src="assets/alfredo-soares.jpg" alt="Alfredo Soares no palco da G4">
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+                        <p class="testimonial-text">É muito previsível o sucesso de vocês porque vocês são bons, vocês já me provaram e tem cases de sucesso.</p>
+                        <figcaption class="testimonial-author"><strong>Alfredo Soares</strong> | Fundador da G4</figcaption>
+                    </blockquote>
+                </figure>
+
+                <figure class="testimonial">
+                    <div class="testimonial-photo">
+                        <img src="assets/head-v4.jpg" alt="Matheus, head de aquisição da V4">
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+                        <p class="testimonial-text">Vocês aumentaram, de cara, 37% de resultado de aquisição de clientes da V4 em 3 meses.</p>
+                        <figcaption class="testimonial-author"><strong>Matheus</strong> | Head de aquisição da V4</figcaption>
+                    </blockquote>
+                </figure>
+            </div>
+
+            <button type="button" class="btn-primary" data-advance data-next="18">Continuar</button>
+        </section>
+
+        <!-- Step 18: Imprensa (clipping) -->
+        <section class="quiz-step" data-step="18">
+            <div class="press-mosaic" aria-hidden="true">
+                <div class="press-mosaic-row">
+                    <img class="pm" src="assets/estadao.jpg" alt="">
+                    <img class="pm" src="assets/pegn.jpg" alt="">
+                    <img class="pm" src="assets/valor.jpg" alt="">
+                    <img class="pm" src="assets/uol.jpg" alt="">
+                    <img class="pm" src="assets/terra1.jpg" alt="">
+                </div>
+                <div class="press-mosaic-row">
+                    <img class="pm" src="assets/band2.jpg" alt="">
+                    <img class="pm" src="assets/band1.jpg" alt="">
+                    <img class="pm" src="assets/terra.jpg" alt="">
+                    <img class="pm" src="assets/msn.jpg" alt="">
+                    <img class="pm" src="assets/band-mobile.jpg" alt="">
+                </div>
+            </div>
+
+            <h2 class="quiz-title">Veja o que a imprensa diz sobre o nosso modelo estratégico para acelerar vendas</h2>
+
+            <div class="press-clippings">
+                <figure class="press-clip">
+                    <img src="assets/estadao.jpg" alt="Matéria no Estadão sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.bluestudio.estadao.com.br</figcaption>
+                </figure>
+                <figure class="press-clip">
+                    <img src="assets/pegn.jpg" alt="Matéria na PEGN sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.revistapegn.globo.com</figcaption>
+                </figure>
+                <figure class="press-clip">
+                    <img src="assets/valor.jpg" alt="Matéria no Valor Econômico sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.valor.globo.com</figcaption>
+                </figure>
+                <figure class="press-clip">
+                    <img src="assets/uol.jpg" alt="Matéria no UOL sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.uol.com.br</figcaption>
+                </figure>
+                <figure class="press-clip">
+                    <img src="assets/terra1.jpg" alt="Matéria no Terra sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.terra.com.br</figcaption>
+                </figure>
+                <figure class="press-clip">
+                    <img src="assets/band2.jpg" alt="Matéria na Band sobre a Full Sales System" loading="lazy">
+                    <figcaption class="press-source">www.band.com.br</figcaption>
+                </figure>
+            </div>
+
+            <button type="button" class="btn-primary" data-advance data-next="19">Continuar</button>
+        </section>
+
+        <!-- Step 19: Loading "análise por especialistas" -->
+        <section class="quiz-step" data-step="19" data-loading="5000" data-next-on-load="20">
+            <div class="loading-image">
+                <img src="assets/analise.png" class="loading-image--compact" alt="">
+            </div>
+
+            <h2 class="quiz-title">A sua análise será desenvolvida por especialistas em vendas</h2>
+            <p class="quiz-subtitle">Na Full Sales System, nós ajudamos empresas a multiplicar vendas, escalar lucros e criar previsibilidade com estratégias comerciais personalizadas.</p>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 20: Análise (barras de progresso) -->
+        <section class="quiz-step quiz-step--analysis" data-step="20" data-loading="5000" data-next-on-load="21">
+            <div class="analysis-logo">
+                <img src="assets/favicon.png" alt="Full Sales System">
+            </div>
+
+            <div class="analysis-bars">
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Nível</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-sublabel">Estrutura comercial</div>
+                    <div class="loading-bar loading-bar--knob">
+                        <div class="loading-bar-fill" data-target="40"></div>
+                    </div>
+                </div>
+
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Análise de perfil...</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-bar">
+                        <div class="loading-bar-fill" data-target="100"></div>
+                    </div>
+                </div>
+
+                <div class="loading-bar-wrapper">
+                    <div class="loading-bar-header">
+                        <span class="loading-label">Análise do negócio..</span>
+                        <span class="loading-percent">0%</span>
+                    </div>
+                    <div class="loading-bar">
+                        <div class="loading-bar-fill" data-target="100"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 21: Resultado -->
+        <section class="quiz-step" data-step="21">
+            <h2 class="result-score">Resultado: 4/10</h2>
+
+            <div class="result-alert">
+                Seu comercial está <strong>operando abaixo do potencial</strong> e travando crescimento.
+            </div>
+
+            <h3 class="result-section-title result-section-title--left">Seu nível comercial</h3>
+
+            <svg class="level-chart" viewBox="0 0 520 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Seu nível comercial comparado ao do concorrente">
+                <defs>
+                    <linearGradient id="lvlGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#ff5b5b"/>
+                        <stop offset="28%" stop-color="#ff8a4c"/>
+                        <stop offset="52%" stop-color="#ffd24c"/>
+                        <stop offset="78%" stop-color="#7bd88f"/>
+                        <stop offset="100%" stop-color="#36c48a"/>
+                    </linearGradient>
+                </defs>
+
+                <g stroke="#dcdfe4" stroke-width="1" stroke-dasharray="4 5">
+                    <line x1="40" y1="30" x2="40" y2="270"/>
+                    <line x1="150" y1="30" x2="150" y2="270"/>
+                    <line x1="260" y1="30" x2="260" y2="270"/>
+                    <line x1="370" y1="30" x2="370" y2="270"/>
+                    <line x1="480" y1="30" x2="480" y2="270"/>
+                    <line x1="40" y1="90" x2="480" y2="90"/>
+                    <line x1="40" y1="150" x2="480" y2="150"/>
+                    <line x1="40" y1="210" x2="480" y2="210"/>
+                </g>
+
+                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#lvlGrad)" opacity="0.42"/>
+                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#lvlGrad)" stroke-width="4" stroke-linecap="round"/>
+
+                <circle cx="150" cy="210" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+                <circle cx="260" cy="150" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+                <circle cx="480" cy="40" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+
+                <rect x="305" y="38" width="132" height="30" rx="15" fill="#E30613"/>
+                <text x="371" y="58" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Concorrente</text>
+                <circle cx="370" cy="78" r="7" fill="#E30613" stroke="#fff" stroke-width="2.5"/>
+
+                <circle cx="40" cy="251" r="6.5" fill="#fff" stroke="#E30613" stroke-width="3"/>
+                <rect x="16" y="259" width="74" height="28" rx="14" fill="#E30613"/>
+                <text x="53" y="278" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Você</text>
+
+                <g fill="#8a8f98" font-size="15" text-anchor="middle" font-family="Inter, sans-serif">
+                    <text x="40" y="312">Baixo</text>
+                    <text x="150" y="312">Aceitável</text>
+                    <text x="260" y="312">Normal</text>
+                    <text x="370" y="312">Médio</text>
+                    <text x="480" y="312">Alto</text>
+                </g>
+            </svg>
+
+            <div class="result-alert result-alert--block">
+                <p class="result-alert-title">&#9711; Nível de Alerta Elevado</p>
+                <p>Hoje, seu comercial <strong>depende mais de esforço individual do que de processo.</strong></p>
+                <p>Isso gera retrabalho, desconto excessivo e dificuldade de escalar.</p>
+            </div>
+
+            <h3 class="result-section-title">Análise dos principais gargalos</h3>
+
+            <div class="bottlenecks">
+                <div class="bottleneck">
+                    <div class="donut">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="donut-track" cx="50" cy="50" r="42"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="92.4 263.9" transform="rotate(-90 50 50)"/>
+                        </svg>
+                        <span class="donut-label">35%</span>
+                    </div>
+                    <h4>Processo comercial</h4>
+                    <p>Falta padrão e previsibilidade</p>
+                </div>
+                <div class="bottleneck">
+                    <div class="donut">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="donut-track" cx="50" cy="50" r="42"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/>
+                        </svg>
+                        <span class="donut-label">40%</span>
+                    </div>
+                    <h4>Script</h4>
+                    <p>Venda depende do vendedor</p>
+                </div>
+                <div class="bottleneck">
+                    <div class="donut">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="donut-track" cx="50" cy="50" r="42"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#ff8c1a" stroke-dasharray="100.3 263.9" transform="rotate(-90 50 50)"/>
+                        </svg>
+                        <span class="donut-label">38%</span>
+                    </div>
+                    <h4>Conversão</h4>
+                    <p>Muito esforço para pouco fechamento</p>
+                </div>
+                <div class="bottleneck">
+                    <div class="donut">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="donut-track" cx="50" cy="50" r="42"/>
+                            <circle class="donut-value" cx="50" cy="50" r="42" stroke="#E30613" stroke-dasharray="79.2 263.9" transform="rotate(-90 50 50)"/>
+                        </svg>
+                        <span class="donut-label">30%</span>
+                    </div>
+                    <h4>Previsibilidade</h4>
+                    <p>Decisões sem dados claros</p>
+                </div>
+            </div>
+
+            <button type="button" class="btn-success" data-advance data-next="22">Como aumentar meus resultados agora</button>
+            <p class="result-footnote">Na próxima etapa, vamos te mostrar como estruturar isso com o método da Full Sales.</p>
+        </section>
+
+        <!-- Step 22: Loading projeção (material exclusivo) -->
+        <section class="quiz-step" data-step="22" data-loading="5000" data-next-on-load="23">
+            <h2 class="quiz-title">Montamos um material exclusivo para acabar com os gargalos da sua empresa</h2>
+            <p class="quiz-subtitle">Com base nas suas respostas, este material aumentará as suas vendas através de um método validado por mais de 10 mil empresas.</p>
+
+            <svg class="level-chart" viewBox="0 0 520 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Projeção do seu nível comercial após 6 meses">
+                <defs>
+                    <linearGradient id="projGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#ff5b5b"/>
+                        <stop offset="28%" stop-color="#ff8a4c"/>
+                        <stop offset="52%" stop-color="#ffd24c"/>
+                        <stop offset="78%" stop-color="#7bd88f"/>
+                        <stop offset="100%" stop-color="#36c48a"/>
+                    </linearGradient>
+                </defs>
+
+                <g stroke="#dcdfe4" stroke-width="1" stroke-dasharray="4 5">
+                    <line x1="40" y1="30" x2="40" y2="270"/>
+                    <line x1="150" y1="30" x2="150" y2="270"/>
+                    <line x1="260" y1="30" x2="260" y2="270"/>
+                    <line x1="370" y1="30" x2="370" y2="270"/>
+                    <line x1="480" y1="30" x2="480" y2="270"/>
+                    <line x1="40" y1="90" x2="480" y2="90"/>
+                    <line x1="40" y1="150" x2="480" y2="150"/>
+                    <line x1="40" y1="210" x2="480" y2="210"/>
+                </g>
+
+                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40 L480,270 L40,270 Z" fill="url(#projGrad)" opacity="0.42"/>
+                <path d="M40,251 C95,251 95,210 150,210 C205,210 205,150 260,150 C315,150 315,78 370,78 C425,78 425,40 480,40" fill="none" stroke="url(#projGrad)" stroke-width="4" stroke-linecap="round"/>
+
+                <circle cx="40" cy="251" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+                <circle cx="260" cy="150" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+                <circle cx="370" cy="78" r="6" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+
+                <rect x="66" y="163" width="128" height="30" rx="15" fill="#E30613"/>
+                <text x="130" y="183" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Você hoje</text>
+                <circle cx="150" cy="210" r="7" fill="#E30613" stroke="#fff" stroke-width="2.5"/>
+
+                <rect x="372" y="8" width="142" height="30" rx="15" fill="#2bbf7a"/>
+                <text x="443" y="28" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Após 6 meses</text>
+                <circle cx="480" cy="40" r="7" fill="#fff" stroke="#2bbf7a" stroke-width="3"/>
+
+                <g fill="#8a8f98" font-size="15" text-anchor="middle" font-family="Inter, sans-serif">
+                    <text x="40" y="312">Baixo</text>
+                    <text x="150" y="312">Aceitável</text>
+                    <text x="260" y="312">Normal</text>
+                    <text x="370" y="312">Médio</text>
+                    <text x="480" y="312">Alto</text>
+                </g>
+            </svg>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-header">
+                    <span class="loading-label">Carregando...</span>
+                    <span class="loading-percent">0%</span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-bar-fill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 23: placeholder próxima etapa -->
+        <section class="quiz-step" data-step="23">
+            <h2 class="quiz-title">Em breve: próxima etapa</h2>
+            <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
+        </section>
+    </main>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
