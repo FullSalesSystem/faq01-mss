@@ -309,6 +309,180 @@ body {
     outline: none;
 }
 
+/* Resultado (Step 21) */
+.result-score {
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 4px 0 24px;
+}
+
+.result-alert {
+    background: #fdeaea;
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 0 auto 28px;
+    max-width: 600px;
+}
+
+.result-alert strong {
+    font-weight: 800;
+}
+
+.result-alert--block {
+    margin-top: 8px;
+}
+
+.result-alert-title {
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.result-alert--block p + p {
+    margin-top: 12px;
+}
+
+.result-section-title {
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    margin: 8px 0 16px;
+}
+
+.result-section-title--left {
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.level-chart {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 28px;
+}
+
+.bottlenecks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 600px;
+    margin: 16px auto 32px;
+}
+
+.bottleneck {
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.donut {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 16px;
+}
+
+.donut svg {
+    width: 100%;
+    height: 100%;
+}
+
+.donut-track {
+    fill: none;
+    stroke: #ededed;
+    stroke-width: 9;
+}
+
+.donut-value {
+    fill: none;
+    stroke-width: 9;
+    stroke-linecap: round;
+}
+
+.donut-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.bottleneck h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.bottleneck p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+.btn-success {
+    display: block;
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #fff;
+    background: #1ca64c;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.btn-success:hover {
+    background: #178a40;
+    transform: translateY(-1px);
+}
+
+.result-footnote {
+    text-align: center;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-top: 18px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 560px) {
+    .result-score {
+        font-size: 30px;
+    }
+    .result-alert {
+        font-size: 15px;
+        padding: 16px 18px;
+    }
+    .donut {
+        width: 104px;
+        height: 104px;
+    }
+    .bottleneck {
+        padding: 18px 10px;
+    }
+    .bottleneck p {
+        font-size: 13px;
+    }
+}
+
 /* Análise com barras (Step 20) */
 .analysis-logo {
     display: flex;
