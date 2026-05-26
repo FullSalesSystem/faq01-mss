@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ01 MSS — Galeria de Assets</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    :root {
+      --azul: #0a2540;
+      --azul-claro: #1769ff;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --texto: #1a2333;
+      --borda: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--texto);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--azul);
+      color: #fff;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    header img { height: 44px; width: auto; }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header p { font-size: 14px; opacity: 0.8; width: 100%; margin-top: 4px; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
+    .meta {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--borda);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(10, 37, 64, 0.12);
+    }
+    .thumb {
+      background: repeating-conic-gradient(#eef2f7 0% 25%, #ffffff 0% 50%) 50% / 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      padding: 12px;
+    }
+    .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .card .name {
+      font-size: 13px;
+      padding: 10px 12px;
+      border-top: 1px solid var(--borda);
+      word-break: break-word;
+      color: #334155;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="LOGO-azul.png" alt="Logo MSS" />
+    <h1>FAQ01 MSS — Galeria de Assets</h1>
+    <p>Pré-visualização de todas as imagens disponíveis no repositório.</p>
+  </header>
+
+  <main class="container">
+    <p class="meta" id="meta"></p>
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer>Atualize esta página adicionando novos arquivos à lista no <code>index.html</code>.</footer>
+
+  <script>
+    const assets = [
+      "LOGO-azul.png",
+      "mss.png",
+      "favicon.png",
+      "Alfredo Soares 02.jpg",
+      "HEAD V4 01.jpg",
+      "secao1.png",
+      "secao1-2.png",
+      "secao30-39.png",
+      "secaoespera.png",
+      "nicho1.png",
+      "nicho2.png",
+      "nicho3.png",
+      "nicho4.png",
+      "nicho5.png",
+      "nicho6.png",
+      "homem18-29.png",
+      "homem30-39.png",
+      "homem40-49.png",
+      "homem50.png",
+      "mulher18-29.png",
+      "mulher30-39.png",
+      "mulher50.png",
+      "analise.png",
+      "calculadora.png",
+      "dimensionamento.png",
+      "garantia.png",
+      "ligacao.png",
+      "numeros.png",
+      "progressbar.png",
+      "prompts.png",
+      "feliz.png",
+      "triste.png"
+    ];
+
+    const grid = document.getElementById("grid");
+    document.getElementById("meta").textContent = assets.length + " arquivos no repositório";
+
+    assets.forEach(function (src) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML =
+        '<div class="thumb"><img loading="lazy" src="' + encodeURI(src) + '" alt="' + src + '" /></div>' +
+        '<div class="name">' + src + '</div>';
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
