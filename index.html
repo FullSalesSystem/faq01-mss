@@ -519,8 +519,46 @@
             </div>
         </section>
 
-        <!-- Step 14: placeholder próxima etapa -->
-        <section class="quiz-step" data-step="14">
+        <!-- Step 14: Nome -->
+        <section class="quiz-step" data-step="14" data-input-step="nome">
+            <h2 class="quiz-title">Preencha seus dados para receber seu diagnóstico:</h2>
+
+            <div class="text-input-wrapper">
+                <label for="leadNome" class="text-input-label">Como podemos te chamar?</label>
+                <input type="text" id="leadNome" name="nome" class="text-input" placeholder="Digite seu nome..." autocomplete="given-name" autocapitalize="words">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="nome" data-next="15" disabled>Continuar</button>
+        </section>
+
+        <!-- Step 15: E-mail -->
+        <section class="quiz-step" data-step="15" data-input-step="email">
+            <h2 class="quiz-title">Preencha seus dados para receber seu diagnóstico:</h2>
+
+            <div class="text-input-wrapper">
+                <input type="email" id="leadEmail" name="email" class="text-input" placeholder="Digite seu e-mail..." autocomplete="email" inputmode="email">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="email" data-next="16" disabled>Continuar</button>
+        </section>
+
+        <!-- Step 16: WhatsApp -->
+        <section class="quiz-step" data-step="16" data-input-step="whatsapp">
+            <div class="text-input-wrapper">
+                <label for="leadWhatsapp" class="text-input-label">Qual o melhor número para contato direto?</label>
+                <input type="tel" id="leadWhatsapp" name="whatsapp" class="text-input" placeholder="Digite seu whatsapp..." autocomplete="tel" inputmode="tel">
+            </div>
+
+            <button type="button" class="btn-primary" data-input-submit="whatsapp" data-next="17" disabled>Continuar</button>
+
+            <p class="quiz-terms">
+                Ao informar meus dados, eu concordo com a <strong>Política de Privacidade</strong>,
+                aceito e autorizo receber contato via e-mail e/ou possivelmente WhatsApp/Ligação.
+            </p>
+        </section>
+
+        <!-- Step 17: placeholder próxima etapa -->
+        <section class="quiz-step" data-step="17">
             <h2 class="quiz-title">Em breve: próxima etapa</h2>
             <p class="quiz-subtitle">Aguardando o conteúdo para continuar o quiz.</p>
         </section>

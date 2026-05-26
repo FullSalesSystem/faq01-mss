@@ -140,6 +140,41 @@
         });
     });
 
+    // Text input steps (nome, email, whatsapp)
+    document.querySelectorAll('.quiz-step[data-input-step]').forEach(stepEl => {
+        const stepKey = stepEl.dataset.step;
+        const input = stepEl.querySelector('.text-input');
+        const submit = stepEl.querySelector('[data-input-submit]');
+        if (!input || !submit) return;
+
+        const isValid = () => {
+            if (!input.value.trim()) return false;
+            return input.checkValidity();
+        };
+
+        const refresh = () => {
+            submit.disabled = !isValid();
+        };
+
+        const submitStep = () => {
+            if (!isValid()) return;
+            state.answers[stepKey] = input.value.trim();
+            const next = parseInt(submit.dataset.next, 10);
+            if (!Number.isNaN(next)) goToStep(next);
+        };
+
+        input.addEventListener('input', refresh);
+        input.addEventListener('keydown', event => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                submitStep();
+            }
+        });
+        submit.addEventListener('click', submitStep);
+
+        refresh();
+    });
+
     backButton.addEventListener('click', goBack);
 
     updateProgress();
