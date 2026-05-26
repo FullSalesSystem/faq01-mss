@@ -175,6 +175,14 @@
         refresh();
     });
 
+    // Botões "Continuar" simples (apenas avançam)
+    document.querySelectorAll('[data-advance]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const next = parseInt(btn.dataset.next, 10);
+            if (!Number.isNaN(next)) goToStep(next);
+        });
+    });
+
     backButton.addEventListener('click', goBack);
 
     updateProgress();
