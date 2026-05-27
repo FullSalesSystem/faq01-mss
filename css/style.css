@@ -567,6 +567,14 @@ body {
     margin-right: auto;
 }
 
+/* Step 22: título/subtítulo alinhados à largura do gráfico */
+.quiz-step[data-step="22"] .quiz-title,
+.quiz-step[data-step="22"] .quiz-subtitle {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .analysis-bars .loading-bar-header {
     margin-bottom: 4px;
 }
