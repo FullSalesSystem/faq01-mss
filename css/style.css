@@ -1680,4 +1680,36 @@ body {
         font-size: 13px;
         line-height: 1.35;
     }
+
+    /* Nicho (step 5): 3 colunas no mobile para caber os 7 nichos sem scroll */
+    .quiz-step[data-step="5"] .cards-grid--3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .quiz-step[data-step="5"] .cards-grid {
+        max-width: 300px;
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+    .quiz-step[data-step="5"] .card-label {
+        padding: 5px 3px;
+        font-size: 10.5px;
+    }
+    .quiz-step[data-step="5"] .quiz-title {
+        font-size: 19px;
+    }
+    .quiz-step[data-step="5"] .quiz-subtitle {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+    .quiz-step[data-step="5"] .text-input-wrapper {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .quiz-step[data-step="5"] .text-input-label {
+        font-size: 12px;
+    }
+    .quiz-step[data-step="5"] .text-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
 }
