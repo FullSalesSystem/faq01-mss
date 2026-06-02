@@ -193,7 +193,14 @@ body {
 }
 
 .quiz-step[data-step="5"] .cards-grid {
-    max-width: 440px;
+    max-width: 380px;
+}
+
+.quiz-step[data-step="5"] .card-label {
+    padding: 8px 4px;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
 }
 
 .quiz-step[data-step="1"] .cards-grid,
@@ -622,18 +629,18 @@ body {
 }
 
 .press-mosaic-row:nth-child(2) {
-    margin-top: -34px;
+    margin-top: -42px;
 }
 
 .pm {
-    width: 172px;
-    height: 116px;
+    width: 220px;
+    height: 148px;
     object-fit: cover;
     object-position: top center;
     border: 3px solid #fff;
     border-radius: 8px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
-    margin-left: -34px;
+    margin-left: -42px;
     background: #fff;
 }
 
@@ -681,13 +688,13 @@ body {
 
 @media (max-width: 560px) {
     .pm {
-        width: 108px;
-        height: 74px;
-        margin-left: -22px;
+        width: 132px;
+        height: 88px;
+        margin-left: -24px;
         border-width: 2px;
     }
     .press-mosaic-row:nth-child(2) {
-        margin-top: -22px;
+        margin-top: -24px;
     }
     .press-source {
         font-size: 14px;
@@ -1648,4 +1655,29 @@ body {
     .quiz-step[data-step="21"] .chart-line { stroke-dashoffset: 0; }
     .quiz-step[data-step="21"] .chart-fill { opacity: 0.42; }
     .quiz-step[data-step="21"] .donut-value { stroke-dashoffset: 0; }
+}
+
+/* ===== Ajustes específicos de mobile ===== */
+@media (max-width: 560px) {
+    /* Idade (steps 1 e 2): cards menores para caber sem scroll */
+    .quiz-step[data-step="1"] .cards-grid,
+    .quiz-step[data-step="2"] .cards-grid {
+        max-width: 280px;
+        gap: 10px;
+    }
+
+    /* Conquistas (step 8): espaçamento apertado para o botão ficar visível */
+    .quiz-step[data-step="8"] .multi-options {
+        gap: 8px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    .quiz-step[data-step="8"] .multi-option {
+        padding: 11px 14px;
+        gap: 12px;
+    }
+    .quiz-step[data-step="8"] .list-option-text {
+        font-size: 13px;
+        line-height: 1.35;
+    }
 }

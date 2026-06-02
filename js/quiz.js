@@ -71,6 +71,24 @@
         }, 60);
     }
 
+    const PORTE_TO_SCORE = {
+        'abaixo-30k': 2,
+        '30-50k': 2,
+        '50-100k': 4,
+        '100-300k': 4,
+        '300-500k': 6,
+        '500k-1m': 6,
+        'acima-1m': 6,
+    };
+
+    function updateResultScore() {
+        const el = document.getElementById('resultScore');
+        if (!el) return;
+        const porte = state.answers['6'];
+        const score = PORTE_TO_SCORE[porte] || 4;
+        el.textContent = `Resultado: ${score}/10`;
+    }
+
     function goToStep(index, options = {}) {
         const target = document.querySelector(`.quiz-step[data-step="${index}"]`);
         if (!target) return;
@@ -88,6 +106,10 @@
         updateProgress();
         updateBackButton();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (index === 21) {
+            updateResultScore();
+        }
 
         if (target.dataset.loading) {
             startLoading(target);
