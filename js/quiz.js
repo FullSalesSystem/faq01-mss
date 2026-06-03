@@ -81,12 +81,67 @@
         'acima-1m': 6,
     };
 
-    function updateResultScore() {
-        const el = document.getElementById('resultScore');
-        if (!el) return;
+    const SCORE_GARGALOS = {
+        2: [15, 20, 18, 10],
+        4: [35, 40, 38, 30],
+        6: [40, 50, 48, 40],
+    };
+
+    const DONUT_CIRC = 263.9;
+
+    function getScore() {
         const porte = state.answers['6'];
-        const score = PORTE_TO_SCORE[porte] || 4;
-        el.textContent = `Resultado: ${score}/10`;
+        return PORTE_TO_SCORE[porte] || 4;
+    }
+
+    function updateResultScore() {
+        const score = getScore();
+        const scoreEl = document.getElementById('resultScore');
+        if (scoreEl) scoreEl.textContent = `Resultado: ${score}/10`;
+
+        const values = SCORE_GARGALOS[score] || SCORE_GARGALOS[4];
+        const donuts = document.querySelectorAll('.quiz-step[data-step="21"] .bottleneck');
+        donuts.forEach((d, i) => {
+            const pct = values[i];
+            if (pct == null) return;
+            const len = (pct / 100) * DONUT_CIRC;
+            const circle = d.querySelector('.donut-value');
+            if (circle) {
+                circle.setAttribute('stroke-dasharray', `${len.toFixed(1)} ${DONUT_CIRC}`);
+                circle.style.setProperty('--len', len.toFixed(1));
+            }
+            const label = d.querySelector('.donut-label');
+            if (label) label.textContent = `${pct}%`;
+        });
+    }
+
+    function updateProjectionMarker() {
+        const svg = document.querySelector('.quiz-step[data-step="22"] .level-chart');
+        if (!svg) return;
+        const rect = svg.querySelector('.proj-badge-rect');
+        const text = svg.querySelector('.proj-badge-text');
+        const dot = svg.querySelector('.proj-badge-dot');
+        if (!rect || !text || !dot) return;
+        const atBaixo = getScore() !== 6;
+        if (atBaixo) {
+            rect.setAttribute('x', '0');
+            rect.setAttribute('y', '204');
+            rect.setAttribute('width', '80');
+            text.setAttribute('x', '40');
+            text.setAttribute('y', '224');
+            text.setAttribute('font-size', '13');
+            dot.setAttribute('cx', '40');
+            dot.setAttribute('cy', '251');
+        } else {
+            rect.setAttribute('x', '66');
+            rect.setAttribute('y', '163');
+            rect.setAttribute('width', '128');
+            text.setAttribute('x', '130');
+            text.setAttribute('y', '183');
+            text.setAttribute('font-size', '15');
+            dot.setAttribute('cx', '150');
+            dot.setAttribute('cy', '210');
+        }
     }
 
     function goToStep(index, options = {}) {
@@ -107,9 +162,8 @@
         updateBackButton();
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        if (index === 21) {
-            updateResultScore();
-        }
+        if (index === 21) updateResultScore();
+        if (index === 22) updateProjectionMarker();
 
         if (target.dataset.loading) {
             startLoading(target);
